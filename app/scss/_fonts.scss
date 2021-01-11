@@ -1,18 +1,27 @@
 // Fonts styles
 @font-face {
-  font-family: "DMSans-Regular";
+  font-family: "Merriweather-Regular";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/DMSans-Regular.woff2") format("woff2"),
-    url("../fonts/DMSans-Regular.woff") format("woff");
+  src: url("../fonts/Merriweather-Regular.woff2") format("woff2"),
+    url("../fonts/Merriweather-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "DMSans-Bold";
+  font-family: "Merriweather-Bold";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/DMSans-Bold.woff2") format("woff2"),
-    url("../fonts/DMSans-Bold.woff") format("woff");
+  src: url("../fonts/Merriweather-Bold.woff2") format("woff2"),
+    url("../fonts/Merriweather-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik-Light";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Rubik-Light.woff2") format("woff2"),
+    url("../fonts/Rubik-Light.woff") format("woff");
 }

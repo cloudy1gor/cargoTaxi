@@ -1,16 +1,20 @@
 // Variables
-$accent-color: #436372;
-$default-color: #585858;
-$title-color: #243f4d;
-$btn-color: #a3bbc8;
-$bg-color: #fcd7b6;
 
-%dms-regular {
+$text-color: #333333;
+$btn-color: #fed100;
+$bg-color: #0466c8;
+
+%mw-regular {
   font-family: "DMSans-Regular", sans-serif;
   font-weight: 400;
 }
 
-%dms-bold {
+%mw-bold {
   font-family: "DMSans-Bold", sans-serif;
   font-weight: 700;
+}
+
+%rubic {
+  font-family: "Rubik-Light", sans-serif;
+  font-weight: 300;
 }

@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  color: $default-color;
-  @extend %dms-regular;
+  color: $text-color;
+  @extend %rubic;
 }
 
 .wrapper {
@@ -29,5 +29,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1230px;
+  max-width: 1350px;
+}
+
+.logo {
 }

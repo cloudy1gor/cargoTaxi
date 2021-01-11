@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <title>Start</title>
-  <meta name="description" content="DESCRIPTION">
-  <meta name="keywords" content="KEYWORD">
+  <title>Cargo Taxi</title>
+  <meta name="description" content="Cargo Taxi">
+  <meta name="keywords" content="Cargo Taxi">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,7 +16,76 @@
 <body>
   <div class="wrapper">
     <header class="header">
-  <h1>header title</h1>
+  <div class="container">
+    <nav class="menu">
+      <svg class="logo">
+        <use xlink:href="images/dest/sprite.svg#Cargo"></use>
+      </svg>
+
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link">Цены</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">Автопарк</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">Отзывы</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link">Контакты</a>
+        </li>
+      </ul>
+
+      <a class="menu__number" href="tel:8(800)-080-12-13">8(800)-080-12-13</a>
+    </nav>
+
+    <div class="header__content">
+      <h1 class="header__title">
+        Транспортировка любой сложности
+      </h1>
+
+      <span class="header__add">По городу и области</span>
+
+      <input class="header__order" type="button" value="#">Заказать
+    </div>
+
+    <ul class="header__info">
+      <li class="header__choise">
+        <svg class="header__pic">
+          <use xlink:href="images/dest/sprite.svg#truck"></use>
+        </svg>
+
+        <span class="header__text">
+          Вместительный транспорт
+        </span>
+      </li>
+
+      <li class="header__choise">
+        <svg class="header__pic">
+          <use xlink:href="images/dest/sprite.svg#gift"></use>
+        </svg>
+
+        <span class="header__text">
+          Бережная
+          упаковка
+        </span>
+      </li>
+
+      <li class="header__choise">
+        <svg class="header__pic">
+          <use xlink:href="images/dest/sprite.svg#dollar"></use>
+        </svg>
+
+        <span class="header__text">
+          Лучшая
+          цена
+        </span>
+      </li>
+    </ul>
+
+    <img class="header__bg-img" src="images/dest/deliv.png">
+  </div>
 </header>
 
     <main class="main">
