@@ -7,66 +7,72 @@
 
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link">Цены</a>
+          <a class="menu__link" href="#">Цены</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link">Автопарк</a>
+          <a class="menu__link" href="#">Автопарк</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link">Отзывы</a>
+          <a class="menu__link" href="#">Отзывы</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link">Контакты</a>
+          <a class="menu__link" href="#">Контакты</a>
         </li>
       </ul>
 
-      <a class="menu__number" href="tel:8(800)-080-12-13">8(800)-080-12-13</a>
+      <a class="menu__number" href="tel:8(800)-080-12-13">
+        <svg class="menu__phone">
+          <use xlink:href="images/dest/sprite.svg#phone"></use>
+        </svg>
+        8(800)-080-12-13</a>
     </nav>
 
-    <div class="header__content">
-      <h1 class="header__title">
-        Транспортировка любой сложности
-      </h1>
+    <div class="header__inner">
+      <img class="header__bg-img" src="images/dest/deliv.png"></img>
 
-      <span class="header__add">По городу и области</span>
+      <div class="header__content">
+        <h1 class="header__title">
+          Транспортировка любой сложности
+        </h1>
 
-      <input class="header__order" type="button" value="#">Заказать
+        <span class="header__add">По городу и области</span>
+
+        <a class="header__order" href="#">Заказать</a>
+      </div>
+
+      <!-- <ul class="header__info">
+        <li class="header__choise">
+          <svg class="header__pic">
+            <use xlink:href="images/dest/sprite.svg#truck"></use>
+          </svg>
+
+          <span class="header__text">
+            Вместительный транспорт
+          </span>
+        </li>
+
+        <li class="header__choise">
+          <svg class="header__pic">
+            <use xlink:href="images/dest/sprite.svg#gift"></use>
+          </svg>
+
+          <span class="header__text">
+            Бережная
+            упаковка
+          </span>
+        </li>
+
+        <li class="header__choise">
+          <svg class="header__pic">
+            <use xlink:href="images/dest/sprite.svg#dollar"></use>
+          </svg>
+
+          <span class="header__text">
+            Лучшая
+            цена
+          </span>
+        </li>
+      </ul> -->
     </div>
-
-    <ul class="header__info">
-      <li class="header__choise">
-        <svg class="header__pic">
-          <use xlink:href="images/dest/sprite.svg#truck"></use>
-        </svg>
-
-        <span class="header__text">
-          Вместительный транспорт
-        </span>
-      </li>
-
-      <li class="header__choise">
-        <svg class="header__pic">
-          <use xlink:href="images/dest/sprite.svg#gift"></use>
-        </svg>
-
-        <span class="header__text">
-          Бережная
-          упаковка
-        </span>
-      </li>
-
-      <li class="header__choise">
-        <svg class="header__pic">
-          <use xlink:href="images/dest/sprite.svg#dollar"></use>
-        </svg>
-
-        <span class="header__text">
-          Лучшая
-          цена
-        </span>
-      </li>
-    </ul>
-
-    <img class="header__bg-img" src="images/dest/deliv.png"></img>
   </div>
 </header>
