@@ -51,6 +51,8 @@ function html() {
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "node_modules/rateyo/src/jquery.rateyo.js",
     "!app/js/main.min.js",
     "app/js/main.js",
   ])

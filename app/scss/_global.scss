@@ -36,3 +36,44 @@ body {
   max-width: 90px;
   max-height: 30px;
 }
+
+.title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+  font-size: 30px;
+  line-height: 37px;
+  @extend %mw-bold;
+
+  &::after {
+    @include pseudo();
+    right: -15px;
+    top: 17px;
+    width: 4px;
+    height: 30px;
+    background-color: $acnt-color;
+    transform: skewX(-45deg);
+  }
+}
+
+.star {
+  display: inline;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  color: #ffffff;
+  background-color: $acnt-color;
+  transition: transform 0.6s;
+  cursor: pointer;
+  @extend %mw-regular;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

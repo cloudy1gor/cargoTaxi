@@ -1,5 +1,6 @@
 .header {
-  background-color: $bg-color;
+  margin-bottom: 90px;
+  background: linear-gradient(to bottom left, $bg-color 50%, #ffffff);
 
   &__inner {
     display: flex;
@@ -29,35 +30,6 @@
     margin-bottom: 50px;
     font-size: 22px;
   }
-
-  &__order {
-    font-size: 24px;
-    color: $text-color;
-  }
-
-  // &__info {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  //   margin-left: auto;
-  //   max-width: 40%;
-  // }
-
-  &__choise {
-    display: flex;
-    align-items: center;
-  }
-
-  &__pic {
-    margin-right: 15px;
-    max-width: 50px;
-    max-height: 50px;
-  }
-
-  &__text {
-    display: block;
-    max-width: 130px;
-  }
 }
 
 .menu {
@@ -70,6 +42,7 @@
   padding: 0 25px;
   height: 70px;
   font-size: 18px;
+  background-color: $bg-color;
   @extend %mw-regular;
 
   &__list {
@@ -77,12 +50,26 @@
     align-items: center;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 45px;
+  &__item {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.6s;
+
+    &:hover {
+      border-color: $acnt-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
   }
 
   &__link {
     color: $text-color;
+    transition: all 0.4s;
+
+    &:hover {
+      color: $acnt-color;
+    }
   }
 
   &__number {

@@ -36,5 +36,8 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rateyo": "^2.3.2",
+    "slick-carousel": "^1.8.1"
+  }
 }

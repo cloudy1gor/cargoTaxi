@@ -7,3 +7,98 @@
 @import "pages/404";
 @import "components/header";
 @import "components/footer";
+
+.best {
+  margin-bottom: 60px;
+
+  &__inner {
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    margin-left: auto;
+    max-width: 55%;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    border-bottom: 2px solid $acnt-color;
+    padding-bottom: 10px;
+  }
+
+  &__choise {
+    display: flex;
+    align-items: center;
+    transition: transform 0.6s;
+    cursor: default;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__pic {
+    margin-right: 15px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  &__text {
+    display: block;
+    max-width: 130px;
+  }
+
+  &__list {
+    list-style: decimal-leading-zero;
+  }
+
+  &__item {
+    min-width: 50%;
+    font-size: 20px;
+    color: $acnt-color;
+    @extend %mw-regular;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__description {
+    margin: 15px 0;
+    color: $text-color;
+    @extend %rubic;
+  }
+}
+
+.reviews {
+  padding: 30px 0;
+  background: linear-gradient(to top left, $bg-color 50%, #ffffff);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.review {
+  margin-bottom: 60px;
+  border-left: 2px solid $acnt-color;
+  padding-left: 15px;
+  max-width: 30%;
+  transition: transform 0.6s;
+  cursor: default;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+}
