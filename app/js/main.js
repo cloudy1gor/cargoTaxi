@@ -1,5 +1,10 @@
 $(function () {
-  $(".header__wrapper").slick();
+  $(".auto__container").slick({
+    prevArrow:
+      '<button type="button" class="slick-prev"><img src="images/dest/prev.svg" alt="#"></button>',
+    nextArrow:
+      '<button type="button" class="slick-next"><img src="images/dest/next.svg" alt="#"></button>',
+  });
 
   $(".star").rateYo({
     starWidth: "20px",
