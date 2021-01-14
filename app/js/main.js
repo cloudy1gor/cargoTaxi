@@ -8,7 +8,7 @@ $(function () {
 
   $(".star").rateYo({
     starWidth: "20px",
-    ratedFill: "#00FF00",
+    ratedFill: "#3cb458",
     normalFill: "#ccccce",
     readOnly: true,
     spacing: "5px",
