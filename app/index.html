@@ -16,34 +16,36 @@
 <body>
   <div class="wrapper">
     <header class="header">
-  <div class="container">
-    <nav class="menu">
+  <nav class="menu">
+    <div class="menu__inner">
       <svg class="logo">
         <use xlink:href="images/dest/sprite.svg#Cargo"></use>
       </svg>
 
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link" href="#">Цены</a>
+          <a class="menu__link" href="#price">Цены</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Автопарк</a>
+          <a class="menu__link" href="#auto">Автопарк</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Отзывы</a>
+          <a class="menu__link" href="#about">Отзывы</a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" href="#">Контакты</a>
+          <a class="menu__link" href="#contact">Контакты</a>
         </li>
       </ul>
 
       <a class="menu__number" href="tel:8(800)-080-12-13">
-        <svg class="menu__phone">
+        <svg class="menu__phone menu__phone--animated">
           <use xlink:href="images/dest/sprite.svg#phone"></use>
         </svg>
         8(800)-080-12-13</a>
-    </nav>
+    </div>
+  </nav>
 
+  <div class="container">
     <div class="header__inner">
       <img class="header__bg-img" src="images/dest/deliv.png">
 
@@ -62,7 +64,7 @@
 </header>
 
     <main class="main">
-      <section class="best">
+      <section class="best wow slideInLeft">
         <div class="container">
           <h2 class="title">Лучшие в своем деле!</h2>
           <div class="best__inner" style="background-image: url('images/dest/head.png');">
@@ -132,7 +134,7 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews wow slideInLeft" id="about">
         <div class="container">
           <h2 class="title reviews__title">Отзывы о нашей работе</h2>
           <div class="reviews__content">
@@ -193,7 +195,7 @@
         </div>
       </section>
 
-      <section class="auto">
+      <section class="auto wow slideInUp" id="auto">
         <div class="container">
           <h2 class="title">Автопарк</h2>
           <h3 class="auto__info">
@@ -255,7 +257,7 @@
         </div>
       </section>
 
-      <section class="price">
+      <section class="price wow slideInUp" id="price">
         <div class="container">
           <h2 class="title">Лучшие цены</h2>
           <span class="subtitle price__subtitle">
@@ -331,7 +333,7 @@
         </div>
       </section>
 
-      <div class="order">
+      <div class="order wow slideInUp">
         <div class="container">
           <span class="order__title">
             Закажи прямо сейчас
@@ -365,7 +367,7 @@
         </div>
       </div>
 
-      <div class="map">
+      <div class="map wow slideInUp" id="contact">
         <div class="container">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.85788514397!2d37.7321460998151!3d55.70884199191403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzMxLjgiTiAzN8KwNDQnMDAuOCJF!5e0!3m2!1sru!2sua!4v1610635315164!5m2!1sru!2sua" width="1310" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
@@ -375,7 +377,85 @@
 
     <footer class="footer">
   <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__content">
+        <svg class="logo">
+          <use xlink:href="images/dest/sprite.svg#Cargo"></use>
+        </svg>
 
+        <a class="footer__link" href="#">
+          Политика
+          конфиденциальнности
+        </a>
+
+        <a class="footer__link" href="#">
+          Соглашение на обработку персональных данных
+        </a>
+      </div>
+
+      <ul class="footer__content">
+        <li class="footer__item">
+          <a href="" class="footer__link">Главная</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Цена</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Автопарк</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Отзывы</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Контакты</a>
+        </li>
+      </ul>
+
+      <div class="footer__box">
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__link" href="#">
+              <svg class="footer__icon">
+                <use xlink:href="images/dest/sprite.svg#y"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__social-item">
+            <a class="footer__link" href="#">
+              <svg class="footer__icon">
+                <use xlink:href="images/dest/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__social-item">
+            <a class="footer__link" href="#">
+              <svg class="footer__icon">
+                <use xlink:href="images/dest/sprite.svg#fb"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__social-item">
+            <a class="footer__link" href="#">
+              <svg class="footer__icon">
+                <use xlink:href="images/dest/sprite.svg#insta"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <a class="footer__mail" href="#">hello@movee.ru</a>
+      </div>
+
+      <div class="footer__box">
+        <a class="footer__btn" href="#">Обратный звонок</a>
+        <a class="footer__tel" href="tel:88000801213">
+          8 (800)-080-12-13
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
   </div>

@@ -4,6 +4,7 @@
 @import "reset";
 @import "libs";
 @import "global";
+@import "animations";
 @import "pages/404";
 @import "components/header";
 @import "components/footer";
@@ -303,4 +304,8 @@
       background-color: #ffffff;
     }
   }
+}
+
+.map {
+  margin-bottom: 60px;
 }

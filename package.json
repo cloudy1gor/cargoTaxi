@@ -37,7 +37,9 @@
     "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "rateyo": "^2.3.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "wow.js": "^1.2.2"
   }
 }

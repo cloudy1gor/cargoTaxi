@@ -53,6 +53,7 @@ function scripts() {
     "node_modules/jquery/dist/jquery.js",
     "node_modules/slick-carousel/slick/slick.js",
     "node_modules/rateyo/src/jquery.rateyo.js",
+    "node_modules/wow.js/dist/wow.js",
     "!app/js/main.min.js",
     "app/js/main.js",
   ])
@@ -65,6 +66,7 @@ function scripts() {
 function styles() {
   return src([
     "node_modules/normalize.css/normalize.css",
+    "node_modules/animate.css/animate.css",
     "!app/scss/_*.scss",
     "app/scss/style.scss",
   ])
