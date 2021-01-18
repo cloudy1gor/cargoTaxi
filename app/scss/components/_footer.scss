@@ -18,7 +18,9 @@
   }
 
   &__link {
+    @include txt(1);
     display: block;
+    max-height: 2.2em;
     color: $text-color;
     transition: color 0.6s;
 
@@ -50,9 +52,11 @@
   }
 
   &__btn {
+    @include txt(1);
     margin-bottom: 15px;
     border: 1px solid $acnt-color;
     padding: 15px 35px;
+    max-width: 250px;
     font-size: 16px;
     color: $text-color;
     background-color: #ffffff;
@@ -68,8 +72,10 @@
 
   &__tel,
   &__mail {
+    @include txt(1);
     display: block;
     border-bottom: 1px solid transparent;
+    max-width: 250px;
     color: $text-color;
     transition: border 0.6s;
 

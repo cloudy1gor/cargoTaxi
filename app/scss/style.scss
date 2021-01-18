@@ -9,11 +9,30 @@
 @import "components/header";
 @import "components/footer";
 
+.up {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &--animated {
+    animation-name: up;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+}
+
 .best {
   margin-bottom: 60px;
 
   &__inner {
     background-position: left bottom;
+    background-size: 60%;
     background-repeat: no-repeat;
   }
 
@@ -50,6 +69,8 @@
   }
 
   &__text {
+    @include txt(2);
+    max-height: 2.2em;
     display: block;
     max-width: 130px;
   }
@@ -69,7 +90,12 @@
     }
   }
 
+  &__txt {
+    @include txt(2);
+  }
+
   &__description {
+    @include txt(2);
     margin: 15px 0;
     color: $text-color;
     @extend %rubic;
@@ -77,7 +103,7 @@
 }
 
 .reviews {
-  border-radius: 0 240px 0 0;
+  border-radius: 0 100px 0;
   padding: 30px 0;
   background: linear-gradient(to top left, $bg-color 50%, #ffffff);
 
@@ -108,12 +134,32 @@
   &:hover {
     transform: translateY(-15px);
   }
+
+  &__name {
+    @include txt(1);
+    display: block;
+    margin-right: 15px;
+    max-height: 1.2em;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  &__date {
+    @include txt(1);
+    max-width: 100px;
+    max-height: 1.2em;
+  }
+
+  &__text {
+    @include txt(7);
+  }
 }
 
 .auto {
   margin: 60px 0;
 
   &__info {
+    @include txt(1);
     margin-bottom: 25px;
     font-size: 26px;
     line-height: 30px;
@@ -130,6 +176,15 @@
   &__title {
     display: block;
     margin-bottom: 25px;
+    font-size: 24px;
+    @extend %mw-regular;
+  }
+
+  &__subtitle {
+    @include txt(1);
+    display: block;
+    margin-bottom: 25px;
+    max-width: 100px;
     font-size: 24px;
     @extend %mw-regular;
   }
@@ -153,18 +208,30 @@
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    p {
+      @include txt(1);
+      max-width: 250px;
+    }
+  }
+
+  &__img {
+    max-width: 50%;
+    object-fit: contain;
   }
 }
 
 .price {
-  border-radius: 0 240px 0 0;
+  border-radius: 0 100px 0;
   padding: 30px 0;
   background: linear-gradient(to top left, $bg-color 50%, #ffffff);
 
   &__subtitle {
+    @include txt(1);
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    max-height: 1.2em;
   }
   &__content {
     display: flex;
@@ -185,10 +252,12 @@
   }
 
   &__title {
+    @include txt(1);
     margin-bottom: 25px;
+    max-width: 250px;
     font-size: 20px;
-    text-align: center;
     line-height: 22px;
+    text-align: center;
     color: $text-color;
     @extend %mw-regular;
   }
@@ -203,13 +272,21 @@
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    p {
+      @include txt(1);
+      margin-bottom: 30px;
+      max-width: 250px;
+    }
   }
 
   &__cost {
+    @include txt(1);
     position: relative;
     left: 50%;
     display: inline-block;
     margin-bottom: 25px;
+    max-width: 250px;
     font-size: 30px;
     color: $text-color;
     transform: translateX(-50%);
@@ -228,9 +305,9 @@
 
   &__title,
   &__subtitle {
-    display: flex;
-    justify-content: center;
+    @include txt(1);
     margin-bottom: 25px;
+    text-align: center;
     color: $text-color;
   }
 
@@ -288,6 +365,7 @@
   }
 
   &__btn {
+    @include txt(1);
     margin-bottom: 15px;
     border: 1px solid transparent;
     padding: 15px 35px;
@@ -303,6 +381,46 @@
       border-color: #3cb458;
       background-color: #ffffff;
     }
+  }
+
+  &__confirm {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+      .order__check {
+        background-color: #3cb458;
+      }
+    }
+  }
+
+  &__check {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    margin-right: 15px;
+    border: 1px solid $acnt-color;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+  }
+
+  &__ok {
+    @include txt(1);
   }
 }
 

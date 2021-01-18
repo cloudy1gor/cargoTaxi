@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
     "rateyo": "^2.3.2",
     "slick-carousel": "^1.8.1",
     "wow.js": "^1.2.2"
