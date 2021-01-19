@@ -1,6 +1,9 @@
 .header {
   margin-bottom: 90px;
   background: linear-gradient(to bottom left, $bg-color 50%, #ffffff);
+  @include mq("1024") {
+    margin-bottom: 60px;
+  }
 
   &__inner {
     display: flex;
@@ -27,13 +30,19 @@
     @include txt(2);
     margin-bottom: 25px;
     max-width: 500px;
-    font-size: 36px;
+    font-size: 33px;
+    @include mq("1024") {
+      font-size: 22px;
+    }
   }
 
   &__add {
     @include txt(1);
     margin-bottom: 50px;
     font-size: 22px;
+    @include mq("1024") {
+      font-size: 18px;
+    }
   }
 }
 
@@ -49,7 +58,9 @@
   font-size: 18px;
   background-color: $bg-color;
   transition: all 0.3s ease;
-  @extend %mw-regular;
+  @include mq("1024") {
+    height: 48px;
+  }
 
   &__inner {
     display: flex;
@@ -78,6 +89,9 @@
 
     &:not(:last-child) {
       margin-right: 45px;
+      @include mq("1024") {
+        margin-right: 20px;
+      }
     }
   }
 
@@ -103,7 +117,7 @@
 
     &--animated {
       animation-name: call;
-      animation-duration: 2s;
+      animation-duration: 1.5s;
       animation-timing-function: ease;
       animation-iteration-count: infinite;
     }
@@ -113,4 +127,5 @@
   &__number {
     max-height: 50px;
   }
+  @extend %mw-regular;
 }

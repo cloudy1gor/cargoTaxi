@@ -18,6 +18,22 @@ $(function () {
       '<button type="button" class="slick-prev"><img src="images/dest/prev.svg" alt="#"></button>',
     nextArrow:
       '<button type="button" class="slick-next"><img src="images/dest/next.svg" alt="#"></button>',
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   });
 
   // рейтинг
@@ -78,7 +94,7 @@ AOS.init({
   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
+  offset: 90, // offset (in px) from the original trigger point
   delay: 100, // values from 0 to 3000, with step 50ms
   duration: 400, // values from 0 to 3000, with step 50ms
   easing: "ease", // default easing for AOS animations
