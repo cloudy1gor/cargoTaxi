@@ -21,7 +21,7 @@
 
   &--animated {
     animation-name: up;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
   }
@@ -426,4 +426,13 @@
 
 .map {
   margin-bottom: 60px;
+
+  &__address {
+    display: inline-block;
+    margin: 25px 0;
+    border-bottom: 1px solid $acnt-color;
+    font-size: 22px;
+    line-height: 1.5em;
+    color: $text-color;
+  }
 }

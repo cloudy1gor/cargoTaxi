@@ -1,22 +1,4 @@
 $(function () {
-  // липкая шапка
-  let header = $(".menu");
-  let hederHeight = header.height(); // вычисляем высоту шапки
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 1) {
-      header.addClass("menu__fixed");
-      $("body").css({
-        paddingTop: hederHeight + "px", // делаем отступ у body, равный высоте шапки
-      });
-    } else {
-      header.removeClass("menu__fixed");
-      $("body").css({
-        paddingTop: 0, // удаляю отступ у body, равный высоте шапки
-      });
-    }
-  });
-
   //кнопка наверх
   $(window).scroll(function () {
     if ($(this).scrollTop() != 0) {
@@ -67,6 +49,21 @@ for (let anchor of anchors) {
     });
   });
 }
+
+// липкая шапка
+var header = $(".menu"),
+  scrollPrev = 0;
+
+$(window).scroll(function () {
+  var scrolled = $(window).scrollTop();
+
+  if (scrolled > 100 && scrolled > scrollPrev) {
+    header.addClass("out");
+  } else {
+    header.removeClass("out");
+  }
+  scrollPrev = scrolled;
+});
 
 // animated
 AOS.init({
