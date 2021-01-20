@@ -41,7 +41,8 @@
     cursor: default;
     @include mq("768") {
       margin-bottom: 20px;
-
+    }
+    @include mq("400") {
       &:last-child {
         margin-left: -20px;
       }
