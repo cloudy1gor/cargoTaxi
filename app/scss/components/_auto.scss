@@ -1,0 +1,87 @@
+.auto {
+  margin: 60px 0;
+
+  &__info {
+    @include txt(1);
+    margin-bottom: 25px;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    @include mq("1024") {
+      font-size: 17px;
+    }
+    @extend %mw-regular;
+  }
+
+  &__container {
+    padding: 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__content {
+    max-width: 50%;
+  }
+
+  &__img {
+    max-width: 50%;
+    object-fit: cover;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 24px;
+    @include mq("1024") {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    @extend %mw-regular;
+  }
+
+  &__subtitle {
+    @include txt(1);
+    display: block;
+    margin-bottom: 25px;
+    max-width: 100px;
+    font-size: 24px;
+    @include mq("1024") {
+      font-size: 16px;
+    }
+    @extend %mw-regular;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $acnt-color;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    p {
+      @include txt(1);
+      max-width: 250px;
+    }
+    @include mq("1024") {
+      font-size: 14px;
+    }
+  }
+}

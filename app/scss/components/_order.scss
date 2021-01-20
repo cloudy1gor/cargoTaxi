@@ -1,0 +1,156 @@
+.order {
+  margin: 60px 0;
+
+  &__title,
+  &__subtitle {
+    @include txt(1);
+    margin-bottom: 25px;
+    text-align: center;
+    color: $text-color;
+  }
+
+  &__title {
+    font-size: 26px;
+    @include mq("1024") {
+      font-size: 20px;
+    }
+    @extend %mw-bold;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    @include mq("1024") {
+      font-size: 18px;
+    }
+    @include mq("768") {
+      display: block;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    @include mq("1024") {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    margin-right: 25px;
+    @include mq("1024") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+    @include mq("768") {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__label {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__input {
+    border: 2px solid transparent;
+    border-bottom: 2px solid $acnt-color;
+    padding: 10px 5px;
+    height: 50px;
+    max-width: 300px;
+    font-size: 20px;
+    color: $text-color;
+    @include mq("768") {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    &::placeholder {
+      font-size: 20px;
+      color: $text-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:focus {
+      border: 2px solid $acnt-color;
+    }
+  }
+
+  &__send {
+    display: flex;
+    flex-direction: column;
+    @include mq("1024") {
+      margin: 0 auto;
+    }
+    @include mq("768") {
+      max-width: 240px;
+    }
+  }
+
+  &__btn {
+    @include txt(1);
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    padding: 15px 35px;
+    max-width: 300px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $text-color;
+    background-color: #3cb458;
+    transition: all 0.6s;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #3cb458;
+      background-color: #ffffff;
+    }
+  }
+
+  &__confirm {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+    clip: rect(0 0 0 0);
+
+    &:checked + .order__check {
+      @include bg($size: "contain", $position: "bottom center");
+      width: 18px;
+      height: 18px;
+      background-image: url("/images/src/check.svg");
+      background-color: $bg-color;
+    }
+  }
+
+  &__check {
+    position: absolute;
+    border: 1px solid $acnt-color;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  &__ok {
+    @include txt(1);
+    margin-left: 30px;
+    @include mq("768") {
+      display: block;
+    }
+  }
+}

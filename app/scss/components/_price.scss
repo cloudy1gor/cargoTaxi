@@ -1,0 +1,115 @@
+.price {
+  border-radius: 0 50px;
+  padding: 30px 0;
+  background: linear-gradient(to top left, $bg-color 50%, #ffffff);
+  @include mq("768") {
+    border-radius: 0 20px;
+  }
+
+  &__subtitle {
+    @include txt(1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    max-height: 1.2em;
+    @include mq("1024") {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @include mq("1024") {
+      align-content: space-around;
+      justify-content: space-around;
+    }
+  }
+
+  &__info {
+    border: 1px solid $acnt-color;
+    border-radius: 0 40px 0 0;
+    padding: 35px 15px;
+    min-width: 300px;
+    @include mq("1024") {
+      margin-bottom: 25px;
+      min-width: 250px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+      @include mq("1024") {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__title {
+    @include txt(1);
+    margin-bottom: 25px;
+    max-width: 250px;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: $text-color;
+    @include mq("1024") {
+      font-size: 16px;
+    }
+    @extend %mw-regular;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+    @include mq("1024") {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    padding: 0 15px;
+    @include mq("1024") {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    p {
+      @include txt(1);
+      margin-bottom: 30px;
+      max-width: 250px;
+      @include mq("1024") {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__cost {
+    @include txt(1);
+    position: relative;
+    left: 50%;
+    display: inline-block;
+    margin-bottom: 25px;
+    padding-right: 25px;
+    max-width: 250px;
+    font-size: 30px;
+    color: $text-color;
+    transform: translateX(-50%);
+    @include mq("1024") {
+      margin-bottom: 15px;
+      padding-right: 15px;
+      font-size: 20px;
+    }
+
+    &::after {
+      @include pseudo($content: "₽");
+      right: 0;
+      top: 0;
+    }
+    @extend %rubic;
+  }
+}
