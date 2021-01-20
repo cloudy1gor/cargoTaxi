@@ -1,4 +1,9 @@
 $(function () {
+  //меню бургер
+  $(".menu__btn, .menu a").on("click", function () {
+    $(".menu__list").toggleClass("menu__list--active");
+  });
+
   //кнопка наверх
   $(window).scroll(function () {
     if ($(this).scrollTop() != 0) {
@@ -95,7 +100,7 @@ AOS.init({
 
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 90, // offset (in px) from the original trigger point
-  delay: 100, // values from 0 to 3000, with step 50ms
+  delay: 50, // values from 0 to 3000, with step 50ms
   duration: 400, // values from 0 to 3000, with step 50ms
   easing: "ease", // default easing for AOS animations
   once: false, // whether animation should happen only once - while scrolling down

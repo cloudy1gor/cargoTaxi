@@ -65,12 +65,12 @@
     background-color: #ffffff;
     transition: all 0.6s;
     cursor: pointer;
-    @extend %mw-regular;
 
     &:hover {
       color: #ffffff;
       background-color: $acnt-color;
     }
+    @extend %mw-regular;
   }
 
   &__tel,
