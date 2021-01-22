@@ -3,6 +3,14 @@ $(function () {
   $(".menu__btn, .menu a").on("click", function () {
     $(".menu__list").toggleClass("menu__list--active");
   });
+  // когда нажимаем вне меню, оно пропадает
+  $(document).mouseup(function (event) {
+    var div = $(".menu__list");
+
+    if (!div.is(event.target) && div.has(event.target).length === 0) {
+      $(".menu__list").removeClass("menu__list--active");
+    }
+  });
 
   //кнопка наверх
   $(window).scroll(function () {
@@ -70,21 +78,6 @@ for (let anchor of anchors) {
     });
   });
 }
-
-// липкая шапка
-var header = $(".menu"),
-  scrollPrev = 0;
-
-$(window).scroll(function () {
-  var scrolled = $(window).scrollTop();
-
-  if (scrolled > 100 && scrolled > scrollPrev) {
-    header.addClass("out");
-  } else {
-    header.removeClass("out");
-  }
-  scrollPrev = scrolled;
-});
 
 // animated
 AOS.init({
